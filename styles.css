@@ -1,0 +1,107 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper
+{
+    height: 100vh;
+    overflow-y: auto; /* to enable scrolling */
+    overflow-x: hidden; /* to prevent horizontal scrolling */
+    perspective: 10px; /* to create a 3D space(distance b/q the z index plane and the eyes) */
+
+}
+.container
+{
+    position: relative;
+    height: 100%; /*to get whole viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transform-style: preserve-3d; /* to make children elements 3D */
+    z-index: -1; /* to place the container behind the text */
+} 
+
+.Background,.Foreground
+{
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    object-fit: cover;  /* to cover the whole container */ 
+    z-index: -1; /* to place the images behind the text */
+}
+.Background
+{
+    transform: translateZ(-40px)scale(10); /* to move the background image back and scale it up */
+}
+.Foreground
+{
+    transform: translateZ(-20px)scale(3); /* to move the background image back and scale it up */
+    top:46rem;
+}
+h1
+{
+    position: absolute;
+    top:5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 10rem;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+section
+{
+    background-color: rgb(45,45,45);
+    color:white;
+    padding: 5rem 0;  
+    /* z-index: 1; to place the text above the images */
+}
+.secHeading
+{
+    font-size: 5rem;
+    padding: 0 10rem;
+} 
+.text
+{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    height: 500px;                /* 🔥 REQUIRED */
+    background-attachment: fixed; /* parallax effect */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.description
+{
+    position: absolute;
+    background-color: white;
+    padding: 0.5 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.bg1
+{ 
+    background-image: url(rk1.png);
+}
+.bg2
+{
+    background-image: url(wallpaper.jpg)
+}
+.bg3
+{
+    background-image: url(rk1234.jpeg);
+}
