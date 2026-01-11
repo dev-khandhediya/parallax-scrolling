@@ -73,7 +73,7 @@ section
 .bg {
     position: relative;
     width: 100%;
-    height: 500px;                /* 🔥 REQUIRED */
+    height: 500px;                /* REQUIRED for the size of the image in scrolling */
     background-attachment: fixed; /* parallax effect */
     background-repeat: no-repeat;
     background-size: cover;
